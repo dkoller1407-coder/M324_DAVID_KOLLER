@@ -1,0 +1,26 @@
+{
+  "name": "task2-linting-formatting-testing",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Task 2: Linting, Formatting, Testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run format-check && npm run lint && npm run test && node index.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "test": "mocha ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0"
+  },
+  "dependencies": {
+    "mocha": "^10.7.3",
+    "prettier": "^3.3.3"
+  }
+}
