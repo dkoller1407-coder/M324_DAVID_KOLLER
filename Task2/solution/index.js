@@ -1,4 +1,4 @@
-// const unusedVariable = 42 // no-unused-vars
+ const unusedVariable = 42 // no-unused-vars
 // var oldStyleVariable = 'bad practice' // no-var
 // let shouldBeConst = 'never changes' // prefer-const
 
