@@ -1,3 +1,5 @@
+version: '3.9'
+
 services:
   mysql:
     image: mysql:latest
@@ -16,3 +18,18 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - mynet
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge
