@@ -30,6 +30,22 @@ services:
     networks:
       - mynet
 
+  web:
+    image: php:8.2-apache
+    container_name: web-app
+    ports:
+      - "8081:80"
+    volumes:
+      - ./web:/var/www/html
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    depends_on:
+      - mysql
+    networks:
+      - mynet
+
 networks:
   mynet:
     driver: bridge
