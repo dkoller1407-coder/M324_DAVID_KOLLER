@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:8.0-debian
     container_name: mysql-demo
     env_file:
       - .env
