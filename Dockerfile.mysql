@@ -1,5 +1,5 @@
 # Dockerfile.mysql
-FROM mysql:latest
+FROM mysql:8.0-debian
 
 # Installiere nano
 RUN apt-get update && \
