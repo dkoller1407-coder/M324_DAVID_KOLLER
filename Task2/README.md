@@ -1,4 +1,4 @@
-# Task 2: Linting, Formatting, Testing 
+# Task 2: Linting, Formatting, Testing
 
 - Erstellen Sie die Datei `index.js`. Führen Sie die Datei mit `node index.js` aus.
 
@@ -10,10 +10,12 @@ export const sum = (a, b) => {
 console.log(sum(1, 2));
 console.log(myUndefinedVariable);
 ```
+
 - Erstellen Sie einen Commit mit der Message "Init" und committen Sie die Datei index.js (Hinweis Prüfung: die Commit Messages werden automatisiert geprüft, muss 1:1 wie vorgegeben sein)
 
 ### Linting mit ESLint
-- Initialisieren Sie NPM mit `npm init -y`. 
+
+- Initialisieren Sie NPM mit `npm init -y`.
 - Installieren Sie ESLint in Ihrem Projekt:
   ```bash
   npm install eslint
@@ -23,7 +25,7 @@ console.log(myUndefinedVariable);
   npm init @eslint/config@latest
   ```
 - Wählen Sie die folgenden Optionen:
-Hinweis: die Optionen sehen evtl. nicht genau gleich aus. Im Zweifelsfall können Sie das Config File auch manuell erstellen. 
+  Hinweis: die Optionen sehen evtl. nicht genau gleich aus. Im Zweifelsfall können Sie das Config File auch manuell erstellen.
 
 ```
  ✔ How would you like to use ESLint? · problems
@@ -52,12 +54,11 @@ eslint@9.x, globals, @eslint/js
   ```
 - Sie sollten eine Fehlermeldung erhalten, die so aussieht:
   `error  'undefinedVariable' is not defined  no-undef`
-- Fügen Sie einen Fehler im JS ein, damit Sie folgende Fehlermeldung erhalten: 
+- Fügen Sie einen Fehler im JS ein, damit Sie folgende Fehlermeldung erhalten:
   ` error  'unusedVariable' is assigned a value but never used`
 - Lesen Sie https://hackernoon.com/10-eslint-rules-you-should-use
   Bauen Sie 2 beliebige Regeln ein und fügen Sie einen entsprechenden Fehler im JS ein, damit eslint eine Fehlermeldung ausgibt.
-- Erstellen Sie einen Commit mit der Message "Linting with Errors" und commiten Sie alle relevanten Dateien. 
-
+- Erstellen Sie einen Commit mit der Message "Linting with Errors" und commiten Sie alle relevanten Dateien.
 
 ### Formatting mit Prettier
 
@@ -79,7 +80,7 @@ eslint@9.x, globals, @eslint/js
   }
   ```
 - Erstellen Sie absichtlich schlecht formatierten Code in der `index.js` Datei, z.B. fügen Sie auf der ersten Zeile am Anfang 5 Leerzeichen ein.
-- Erstellen Sie einen Commit mit der Message "Formatting with Errors" und commiten Sie alle relevanten Dateien. 
+- Erstellen Sie einen Commit mit der Message "Formatting with Errors" und commiten Sie alle relevanten Dateien.
 - Führen Sie das Formatting aus, um den Code automatisch zu korrigieren:
   ```bash
   npm run format
@@ -120,24 +121,27 @@ eslint@9.x, globals, @eslint/js
   ```
 - Sie sollten sehen, dass der Test fehlschlägt. Korrigieren Sie die Funktion `sum`, um den Test erfolgreich bestehen zu lassen.
 - Fügen Sie einen weiteren Test hinzu, der zwei Dezimalzahlen addiert.
-- Erstellen Sie einen Commit mit der Message "Testing" und commiten Sie alle relevanten Dateien. 
+- Erstellen Sie einen Commit mit der Message "Testing" und commiten Sie alle relevanten Dateien.
 
 ### Build Automatisierung
 
 - Ändern Sie das Script `start` in `package.json` wie folgt:
   Bevor die Node Applikation gestartet wird, wird der Code formatiert, gelintet und getestet.
-- Alle Linting, Formatting oder Testing Issues müssen gelöst werden. 
-- Erstellen Sie einen Commit mit der Message "Finish" und commiten Sie alle relevanten Dateien. 
+- Alle Linting, Formatting oder Testing Issues müssen gelöst werden.
+- Erstellen Sie einen Commit mit der Message "Finish" und commiten Sie alle relevanten Dateien.
 
 ### Tipps
-- Wie in der Aufgabe letzte Woche: um in JS Module zu nutzen, braucht es im package.json: 
+
+- Wie in der Aufgabe letzte Woche: um in JS Module zu nutzen, braucht es im package.json:
+
 ```
 {
   "type": "module"
 }
 ```
 
-- Wenn Sie mocha verwenden, wird sich eslint beschweren. Es braucht in der eslint Config so etwas: 
+- Wenn Sie mocha verwenden, wird sich eslint beschweren. Es braucht in der eslint Config so etwas:
+
 ```
 {
   files: ["**/*.test.js"],
